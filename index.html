@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             background-color: pink;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
         #passcodeScreen {
             margin-top: 100px;
@@ -39,44 +39,15 @@
         h1 {
             color: red;
         }
-        .envelope {
-            position: relative;
-            width: 250px;
-            height: 150px;
-            background: #c0392b;
-            margin: 50px auto;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .envelope:hover {
-            transform: scale(1.1);
-        }
-        .letter {
-            width: 250px;
-            height: 250px;
+        .letter-container {
             background: white;
-            position: absolute;
-            top: -100px;
-            left: 0;
             padding: 20px;
-            text-align: left;
-            font-size: 14px;
-            opacity: 0;
-            transition: 0.5s;
-            overflow-y: auto;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-        }
-        .envelope.open .letter {
-            top: -280px;
-            opacity: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: black; /* ✅ Black text para madaling basahin */
         }
     </style>
 </head>
@@ -92,20 +63,16 @@
     <!-- Main Content -->
     <div class="container" id="content">
         <h1>Happy Valentine's Day! ❤️</h1>
-        <p>Click the envelope to open your letter!</p>
-        <div class="envelope" onclick="openEnvelope()">
-            Click to Open 💌
-            <div class="letter">
-                <p><b>My Love,</b></p>
-                <p>Happy Valentine’s Day!</p>
-                <p>I don’t even know where to begin because my heart is just so full right now. I never expected you to go the extra mile just to make me feel special today, but you did—and you always do. When I found out how you planned everything, how you asked Shaina to buy me flowers, and then surprised me with Jollibee, I couldn’t help but smile like an idiot. <b>Kilig takon gid!</b></p>
-                <p>But more than the flowers and the food, it’s the thought behind it that means the most to me. It’s knowing that you went out of your way to make me happy, that you pay attention to the little things that make my heart flutter. That’s what I love about you—your kindness, your effort, your way of making me feel like the luckiest person alive just by being you.</p>
-                <p>I also want to say sorry for last night and this morning. I know I got a little sulky, but it’s only because I just want to feel extra loved by you, to be reminded that I’m someone special to you. <b>Iba gid ang igo bay kung sa imo halin.</b> I’m really sorry, palangga. Thank you for always being patient with me, for understanding my little moods, and for loving me even when I’m stubborn.</p>
-                <p>Every moment with you is something I treasure. Your smile brightens even my dullest days, and your laughter? That’s my favorite sound in the world. I love how you understand me even when I struggle to find the right words, how you make me feel safe, loved, and appreciated. You inspire me, challenge me, and remind me every day that love isn’t just about grand gestures—it’s about the small, everyday things that show just how much we care.</p>
-                <p>So here I am, writing this letter with a heart overflowing with love for you. Thank you for being my safe space, my happiness, my greatest love. I can't wait to make more memories with you, to laugh with you, and to love you even more with each passing day.</p>
-                <p><b>I love you so much—today, tomorrow, and for as long as time allows.</b></p>
-                <p><b>Yours forever,</b><br>Siligaya</p>
-            </div>
+        <div class="letter-container">
+            <p><b>My Love,</b></p>
+            <p>Happy Valentine’s Day!</p>
+            <p>I don’t even know where to begin because my heart is just so full right now. I never expected you to go the extra mile just to make me feel special today, but you did—and you always do. When I found out how you planned everything, how you asked Shaina to buy me flowers, and then surprised me with Jollibee, I couldn’t help but smile like an idiot. <b>Kilig takon gid!</b></p>
+            <p>But more than the flowers and the food, it’s the thought behind it that means the most to me. It’s knowing that you went out of your way to make me happy, that you pay attention to the little things that make my heart flutter. That’s what I love about you—your kindness, your effort, your way of making me feel like the luckiest person alive just by being you.</p>
+            <p>I also want to say sorry for last night and this morning. I know I got a little sulky, but it’s only because I just want to feel extra loved by you, to be reminded that I’m someone special to you. <b>Iba gid ang igo bay kung sa imo halin.</b> I’m really sorry, palangga. Thank you for always being patient with me, for understanding my little moods, and for loving me even when I’m stubborn.</p>
+            <p>Every moment with you is something I treasure. Your smile brightens even my dullest days, and your laughter? That’s my favorite sound in the world. I love how you understand me even when I struggle to find the right words, how you make me feel safe, loved, and appreciated. You inspire me, challenge me, and remind me every day that love isn’t just about grand gestures—it’s about the small, everyday things that show just how much we care.</p>
+            <p>So here I am, writing this letter with a heart overflowing with love for you. Thank you for being my safe space, my happiness, my greatest love. I can't wait to make more memories with you, to laugh with you, and to love you even more with each passing day.</p>
+            <p><b>I love you so much—today, tomorrow, and for as long as time allows.</b></p>
+            <p><b>Yours forever,</b><br>Siligaya</p>
         </div>
     </div>
 
@@ -121,11 +88,4 @@
                 alert("Wrong passcode! Try again.");
             }
         }
-
-        function openEnvelope() {
-            document.querySelector(".envelope").classList.toggle("open");
-        }
-    </script>
-
-</body>
-</html>
+    </script
