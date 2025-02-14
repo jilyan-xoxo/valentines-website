@@ -1,4 +1,4 @@
-!DOCTYPE html>
+Happy Valentine's Day, Palangga! 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -113,4 +113,20 @@
     <script>
         function checkPasscode() {
             let input = document.getElementById("passcode").value;
-            let corr
+            let correctPasscode = "1222"; // New passcode
+
+            if (input === correctPasscode) {
+                document.getElementById("passcodeScreen").style.display = "none"; // Hide passcode screen
+                document.getElementById("content").style.display = "block"; // Show main content
+            } else {
+                alert("Wrong passcode! Try again.");
+            }
+        }
+
+        function openEnvelope() {
+            document.querySelector(".envelope").classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>
